@@ -1,10 +1,9 @@
-# Crea-aportes-geniales-en-Platzi-con-Markdown
-Version final del tutorial de Markdown para la comunidad en Platzi
+## Aprende Aritmética Modular con Javascript y Platzi
 
 Autores:
  - @mistersoftware
 
-## Aprende Aritmética Modular con Javascript y Platzi
+
 <!--
 párrafo corto que explica qué estas proponiendo
 -->
