@@ -1,5 +1,7 @@
 ## Aprende Aritmética Modular con Javascript y Platzi
 
+![video](http://g.recordit.co/yfcepM6EnX.gif)
+
 Autores:
  - @mistersoftware
 
@@ -7,17 +9,18 @@ Autores:
 <!--
 párrafo corto que explica qué estas proponiendo
 -->
-En este proyecto aprenderas conceptos básicos de matematicas discretas, como la modularidad, los diagramas de fases o tablas de multiplicar, y algunos más.
-## 2 Motivación
+En este proyecto aprenderas conceptos básicos de matematicas discretas, como la modularidad, los diagramas de fases o tablas de multiplicar.
+
+## Motivación
 
 <!--
 ¿qué motiva esta decisión y por qué es importante?
 el propósito de esta sección es articular de una manera sencilla el valor de la decision que vamos a tomar
 -->
-Mi motivación es practicar las habilidades adquridas en la creación de algo. 
+Mi motivación es practicar las habilidades adquridas creando algo. 
 
 
-## 3 Propuesta de implementación
+## Propuesta de implementación
 
 <!--
 Este es el núcleo de tu propuesta, y su proposito es ayudarte a pensar en la solución. Esto debe ser un wireframe, no un documento perfecto con todos los detalles.
@@ -33,9 +36,9 @@ El proposito de esta sección se resume en:
 
  -->
  
-Este proyecto se ha subido al sitio codepen y aquí se incluye su código fuente.
+Este proyecto se ha subido al sitio [codepen](https://codepen.io/oiio/full/QWwMRPM) y aquí se incluye su código fuente.
 
-## 4 Métricas
+## Métricas
 
 <!--
 Que métricas debemos vamos a instrumentar, o monitorear para observar las implicaciónes de esta decisiòn?
@@ -43,7 +46,7 @@ Por ejemplo, cuando interactuamos con un sistema externo que tipo de latencia es
 -->
 Dime tú.
 
-## 5 Riesgos e inconvenientes
+## Riesgos e inconvenientes
 
 <!--
 ¿Hay razones por las que no deberiamos hacer esto?
@@ -51,14 +54,14 @@ Dime tú.
 -->
 Ninguno que yo sepa.
 
-## 6 Alternativas
+## Alternativas
 
 <!--
 ¿Hay otras formas de resolver éste problema?
 -->
 Quedarse quieto y no hacer nada.
 
-## 7 Impacto potencial y dependencias
+## Impacto potencial y dependencias
 
 <!--
   ¿Qué otros sistemas se verán afectados con esta propuesta?
@@ -69,7 +72,7 @@ Quedarse quieto y no hacer nada.
  -->
 Pues ojalá alguién lo vea y aprenda algo. Por lo menos yo aprendí asi que ya hay ganancia.
 
-## 8 Preguntas sin resolver
+## Preguntas sin resolver
 
 <!--
 ¿ Qué preguntas no hemos resuelto?
@@ -77,7 +80,7 @@ Pues ojalá alguién lo vea y aprenda algo. Por lo menos yo aprendí asi que ya 
 * ¿Será posible aprovecharlo a nivel comercial? 
 
 
-## 9 Conclusión
+## Conclusión
 
 Nada, veremos que pasa.
 
