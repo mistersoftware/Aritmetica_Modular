@@ -1,6 +1,6 @@
 ## Aprende Aritmética Modular con Javascript y Platzi
 
-![video](http://g.recordit.co/yfcepM6EnX.gif)
+![Imgur](https://i.imgur.com/XRTVhqj.gif)
 
 Autores:
  - @mistersoftware
