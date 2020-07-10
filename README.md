@@ -1,6 +1,6 @@
 ## En este proyecto aprenderás conceptos básicos de matemáticas discretas, como la modularidad, los diagramas de fases o tablas de multiplicar.
 
-![Imgur](https://i.imgur.com/XRTVhqj.gif)
+[trailer](https://i.imgur.com/XRTVhqj.gif)
 
 ## Motivación
 
@@ -31,7 +31,7 @@ Quedarse quieto y no hacer nada.
 ## Impacto potencial y dependencias
 
 
-Pues ojalá alguién lo vea y aprenda algo. Por lo menos yo aprendí asi que ya hay ganancia.
+Pues ojalá alguien lo vea y aprenda algo. Por lo menos yo aprendí así que ya hay ganancia.
 
 ## Preguntas sin resolver
 
@@ -43,6 +43,6 @@ Pues ojalá alguién lo vea y aprenda algo. Por lo menos yo aprendí asi que ya 
 
 ## Conclusión
 
-Nada, veremos que pasa.
+Nada, veremos qué pasa.
 
 
