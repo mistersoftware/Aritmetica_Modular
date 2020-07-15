@@ -1,6 +1,6 @@
 ## En este proyecto aprenderás conceptos básicos de matemáticas discretas, como la modularidad, los diagramas de fases o tablas de multiplicar.
 
-![Imgur](https://i.imgur.com/XRTVhqj.gif)
+![resize-aritmetica](https://user-images.githubusercontent.com/12854504/87575567-b8bc5b00-c695-11ea-990c-c378bc548a0b.gif)
 
 ## Motivación
 
