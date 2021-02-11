@@ -11,20 +11,20 @@
         <div class="principal">
             <h2>DIAGRAMA DE FASES</h2>
             <div class="sabana">
-	            <canvas width="480" height="480" id="dibujito"> </canvas>          
+	            <canvas width="320" height="320" id="dibujito"> </canvas>          
                 <div class="barverot"> 
                     <p class="minicanvas">Mover horiz.</p> 
-                    <input type="range" id="moverx" min="0" max="480" value="240" step="-10" />  
+                    <input type="range" id="moverx" min="0" max="320" value="160" step="-10" />  
                     <p class="minicanvas">Mover vert.</p> 
-                    <input type="range" id="movery" min="0" max="480" value="240" step="-10" orient="vertical" />      
-                    <p class="minicanvas">Acercar</p>  <input type="range" id="radio" min="240" max="3600" value="240" step="10" orient="vertical" />
+                    <input type="range" id="movery" min="0" max="320" value="160" step="-10" orient="vertical" />      
+                    <p class="minicanvas">Acercar</p>  <input type="range" id="radio" min="160" max="3600000" value="160" step="10" orient="vertical" />
                     <p class="minicanvas">Alejar</p> 
                 </div>
                 <div class="colorespick">
                     <p><button id="selectorcolor" class="jscolor {valueElement:'chosen_value', onFineChange:'setTextColor(this)'}">Color</button>
                     </p>
                     <p><input id="chosen_value" value="#221303">
-                    </p>
+                    </p>log 7
                 </div>
             </div>
         </div>      
@@ -43,7 +43,7 @@
             </div>            
         </div>
         <div class="accordionItem">
-            <h2>Factorización de <span id="resultadox11" class="minitext"></span> 
+            <h2>Factorización de <span id="resultadox11" class="minitext"></span></h2>
             <div> 
                 <div class="marcointerno">
                     <p id="resultadox"></p>
@@ -106,11 +106,7 @@
                 <input type="number" id="limite" value=1234391 />
                 <input type="button" value="Ver divisores" id="mostrar" />
             </div>
-            <div class="pruebas">
-                <p>Ancho imagen  <input type="number" id="ckanvaswidth" value=480 /></p>
-                <p>Alto imagen  <input type="number" id="ckanvasheight" value=480 /></p>
-                <p>Radio (zoom) <input type="number" id="radioold" value=240 /></p>
-            </div>
+
         </div> 
     </div>
     <div class="columna3">
@@ -118,7 +114,7 @@
             <h2>CONTROLES</h2>
             <div class="boxcolor">
                 <p style="txtminiatura"> </p>  
-                <p>Modulo  <input type="number" id="divisiones" value=560 /></p>
+                <p>Modulo  <input type="number" id="divisiones" value=680 /></p>
                 <p>Factor  <input type="number" id="tiempo" value=985 /></p>
                 <p><input type="button" value="Calcular" id="mostrar" /></p>
             </div>
@@ -127,9 +123,14 @@
                     <p><input id="chosen_value1" value="#221303">
                     </p>
                 </div>
-            </div>    
+            </div>
         </div>
     </div>
+<div class="pruebas">
+  <p>Ancho imagen  <input type="number" id="ckanvaswidth" value=320 /></p>
+  <p>Alto imagen  <input type="number" id="ckanvasheight" value=320 /></p>
+  <p>Radio (zoom) <input type="number" id="radioold" value=160 /></p>
+</div>
 <script src="dibujito.js"></script> 
 <script> function setTextColor(picker) {document.getElementsByTagName('pruebas')[0].style.color = '#' + picker.toString()}</script>
 </body>
