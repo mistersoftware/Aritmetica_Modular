@@ -1,48 +1,16 @@
-//Esta pagina fue elaborada como parte del curso de programacion básica gratuito en platzi. El proyecto reune la implementacion de lo aprendido en los ejemplos como fizz-fuz y el manejo del canvas. //Matematicamente hablando, el proyecto resulta de utilidad en el area llamada teoria de numeros, pues funciona como una herramienta para calcularestudiar operaciones de artimetica modular.
-//manejo del acordeon
-var accordionItems = new Array();
-function getFirstChildWithTagName( element, tagName ) {
-  for ( var i = 0; i < element.childNodes.length; i++ ) {
-    if ( element.childNodes[i].nodeName == tagName ) return element.childNodes[i];
-	}
-}
-function toggleItem() {
-  var itemClass = this.parentNode.className;
-// ocultar todos los items
-  for ( var i = 0; i < accordionItems.length; i++ ) {
-    accordionItems[i].className = 'accordionItem hide';
-  }
-// mostrar item si estaba oculto
-  if ( itemClass == 'accordionItem hide' ) {
-    this.parentNode.className = 'accordionItem';
-  }
-  }
-function init() {
-// tomar elementos del acordeon de la pagina
-  var divs = document.getElementsByTagName( 'div' );
-  for ( var i = 0; i < divs.length; i++ ) {
-    if ( divs[i].className == 'accordionItem' ) accordionItems.push( divs[i] );
-  }
-// asignar eventos onclick a los encabezados de cada pestaña
-  for ( var i = 0; i < accordionItems.length; i++ ) {
-    var h2 = getFirstChildWithTagName( accordionItems[i], 'H2' );
-    h2.onclick = toggleItem;
-    h2.onchange = toggleItem;
-  }
-// ocultar todo excepto el primero
-  for ( var i = 1; i < accordionItems.length; i++ ) {
-    accordionItems[i].className = 'accordionItem hide';
-  }
-}
-// parte matematica - lienzo con time tables
+//Saludos! Gracias a todos los que han decidido dedicar un tiempo a revisar mi código. Este es el resultado del taller de programación básica gratuito en Platzi. La idea principal en este proyecto es aplicar conceptos elementales como el algoritmo fizzbuzz para construir un factorizador de números enteros. Por otra parte he tomado lo aprendido durante el curso en relación al manejo del canvas, para crear una graficadora de diagramas de fases para aritmetica modular. Por favor disculpa el desorden en el codigo, mi ultimo intento de moficiacion fue para tratar de hacer que el tamaño del cavas se pudiera cambiar dinamicamente, en eso voy. Si quieres ayudarme enviame un mensaje en Platzi a @luisca. Te lo agradecere mucho.
+
+//================================
+// Manejo del canvas
+//================================
+
+//la variable tiempo hace referencia al factor recibido del usuario. la idea es la siguiente: la circunferencia se divide en la cantidad de divisiones proporcionada por el usuario.
+
 var tiempo,divisiones,canvasheight,canvaswidth,angulito;
 var d = document.getElementById("dibujito");
 var lienzo = d.getContext("2d");
-//lienzo.rotate(-45*Math.PI/180); no sirve bien
 var angulito = 0;
-
 function dibujarLineas(color,xinicial,yinicial,xfinal,yfinal){
-//la variable tiempo hace referencia al factor recibido del usuario. la idea es la siguiente: la circunferencia se divide en la cantidad de divisiones proporcionada por el usuario, si el usuario elige 360 divisiones entonces cad 
   var angulito = 0;
   var r = document.getElementById("ckanvaswidth");
   ckanvaswidth = parseInt(r.value);
@@ -66,58 +34,19 @@ function dibujarLineas(color,xinicial,yinicial,xfinal,yfinal){
 	movery = parseInt(my.value);
 	var l = 1;
 	var yi, xf,angulo,xi,yf,divisiones,ckanvaswidth,ckanvasheight;
-//	var colorcito = "#FAA";
-//  var chosen_value = "#FAA";
   var selectorcolor = document.getElementById("chosen_value");
   colorcito = selectorcolor.value;
-// lo que viene a continuacion y esta desacrtivado fue heredado del archivo inicial el cual tenia 4 cajas de controles de color
-//  var selectorcolor2 = document.getElementById("chosen_value2");
-//  colorcito2 = selectorcolor2.value;
- // var selectorcolor3 = document.getElementById("chosen_value3");
- // colorcito3 = selectorcolor3.value;
- // var selectorcolor4 = document.getElementById("chosen_value4");
- // colorcito4 = selectorcolor4.value;
-//	var radio = parseFloat((ckanvaswidth + ckanvasheight ) / 4 );
 	var angulito = parseFloat(2*Math.PI / (divisiones));
 	for (l = 1; l < divisiones; l++) {
-//estos parsefloat podrian no ser necesarios
-      	angulo = ((angulito) * l) ;
+    angulo = ((angulito) * l) ;
 		xi = moverx - radio * (Math.sin(angulo));
-		yi = 480-movery - radio * (Math.cos(angulo));
+		yi = 320-movery - radio * (Math.cos(angulo));
 		xf = moverx - radio * (Math.sin(tiempo * angulo));
-		yf = 480-movery - radio * (Math.cos(tiempo * angulo));
+		yf = 320-movery - radio * (Math.cos(tiempo * angulo));
     xc = 
 		dibujarLinea('#'+colorcito,xi,yi,xf,yf);
 	}
-// psrte matematica para los 4 colores que he retirado  
-//  for (l = divisiones/4; l < divisiones/2; l++) {
-//    angulo = ((angulito) * l) ;
-//		xi = moverx + radio * (Math.sin(angulo));
-//		yi = 420-movery + radio * (Math.cos(angulo));
-//		xf = moverx + radio * (Math.sin(tiempo * angulo));
-//		yf = 420-movery + radio * (Math.cos(tiempo * angulo));
-//		dibujarLinea('#'+colorcito2,xi,yi,xf,yf);
-//	}
- // for (l = divisiones/2; l < ((3*divisiones)/4); l++) {
-//    angulo = ((angulito) * l) ;
-	//	xi = moverx + radio * (Math.sin(angulo));
-	//	yi = 420-movery + radio * (Math.cos(angulo));
-	//	xf = moverx + radio * (Math.sin(tiempo * angulo));
-	//	yf = 420-movery + radio * (Math.cos(tiempo * angulo));
-	//	dibujarLinea('#'+colorcito3,xi,yi,xf,yf);
-//	}
- // for (l = ((3*divisiones)/4); l <= divisiones; l++) {
-//estos parsefloat no son necesarios en realidad. lo que se buscaba con ellos era mejorar la precision en los angulos. hay algo extraño ocurriendo y existe un desfase que se puede notar en nodos 10, factor 2
- //   angulo = ((angulito) * l) ;
-//		xi = moverx + radio * (Math.sin(angulo));
-//		yi = 420-movery + radio * (Math.cos(angulo));
-//		xf = moverx + radio * (Math.sin(tiempo * angulo));
-//yf = 420-movery + radio * (Math.cos(tiempo * angulo));
-//		dibujarLinea('#'+colorcito4,xi,yi,xf,yf);
-	//}
-  
-// funcion dibujar. toma la posicion inicial dada y traa una linea recta desde ese punto al punto final tambien dado.
-function dibujarLinea(color,xinicial,yinicial,xfinal,yfinal) {
+  function dibujarLinea(color,xinicial,yinicial,xfinal,yfinal) {
 		lienzo.beginPath();
 		lienzo.strokeStyle = color;
 		lienzo.moveTo(xinicial,yinicial);
@@ -127,7 +56,50 @@ function dibujarLinea(color,xinicial,yinicial,xfinal,yfinal) {
 	}
 }
 
-// Eventos, esto parece corferias xD
+//================================
+// Manejo del acordeon
+//================================
+
+var accordionItems = new Array();
+// Invocamos la primera pestaña que contiene un pequeño instructivo
+function getFirstChildWithTagName( element, tagName ) {
+  for ( var i = 0; i < element.childNodes.length; i++ ) {
+    if ( element.childNodes[i].nodeName == tagName ) return element.childNodes[i];
+	}
+}
+// ocultar o mostrar pestañas
+function toggleItem() {
+  var itemClass = this.parentNode.className;
+  for ( var i = 0; i < accordionItems.length; i++ ) {
+    accordionItems[i].className = 'accordionItem hide';
+  }
+// mostrar item si estaba oculto
+  if ( itemClass == 'accordionItem hide' ) {
+    this.parentNode.className = 'accordionItem';
+  }
+  }
+// tomar elementos del acordeon de la pagina guardados en el archivo html
+function init() {
+  var divs = document.getElementsByTagName( 'div' );
+  for ( var i = 0; i < divs.length; i++ ) {
+    if ( divs[i].className == 'accordionItem' ) accordionItems.push( divs[i] );
+  }
+// asignar eventos onclick a los encabezados de cada pestaña
+  for ( var i = 0; i < accordionItems.length; i++ ) {
+    var h2 = getFirstChildWithTagName( accordionItems[i], 'H2' );
+    h2.onclick = toggleItem;
+    h2.onchange = toggleItem;
+  }
+// ocultar todo excepto el primero
+  for ( var i = 1; i < accordionItems.length; i++ ) {
+    accordionItems[i].className = 'accordionItem hide';
+  }
+}
+
+//================================
+// Manejo de eventos 
+//================================
+
 var cj = document.getElementById("tiempo");
 cj.addEventListener("click", dibujarLineas);
 var fxg = document.getElementById("divisiones");
@@ -163,24 +135,15 @@ selectorcolor.addEventListener("onFineChange", dibujarLineas);
 chosen_value.addEventListener("onFineChange", dibujarLineas);
 chosen_value.addEventListener("change", dibujarLineas);
 chosen_value.addEventListener("input", dibujarLineas);
-//var selectorcolor2 = document.getElementById("chosen_value2");
-//.addEventListener("onFineChange", dibujarLineas);
-//chosen_value2.addEventListener("onFineChange", dibujarLineas);
-//.addEventListener("change", dibujarLineas);
-//chosen_value2.addEventListener("input", dibujarLineas);
-//var selectorcolor3 = document.getElementById("chosen_value3");
-//selectorcolor3.addEventListener("onFineChange", dibujarLineas);
-//chosen_value3.addEventListener("onFineChange", dibujarLineas);
-//chosen_value3.addEventListener("change", dibujarLineas);
-//chosen_value3.addEventListener("input", dibujarLineas);
-//selectorcolor4.addEventListener("onFineChange", dibujarLineas);
-//chosen_value4.addEventListener("onFineChange", dibujarLineas);
-//chosen_value4.addEventListener("change", dibujarLineas);
-//chosen_value4.addEventListener("input", dibujarLineas);
 window.addEventListener('load', dibujarLineas, false);
 window.addEventListener('load', desplegarDatos, false);
 window.addEventListener('load', desplegarDatosxx, false);
-/////////// parte numerica opcional : factorizacion de los valoree dados por el usuario. esto tiene varios erroes por corregir
+
+//================================
+// Factorizador 1
+//================================
+// Nota: Esto tiene varios errores por corregir, en particular hay que aclarar que el algoritmo funciona bien en un rango determinado y fuera de este rango su precision baja.
+
 var divisiblexx = false;
 var txx = document.getElementById("divisiones");
 limitexx = parseInt(txx.value);
@@ -289,7 +252,12 @@ function desplegarDatosxx () {
 		  }
 	  }
 	}
-	
+
+//================================
+// Factorizador 2
+//================================
+// Nota: Esto tiene varios errores por corregir, en particular hay que aclarar que el algoritmo funciona bien en un rango determinado y fuera de este rango su precision baja.
+
 var bxx = document.getElementById("mostrar");
 bxx.addEventListener("click", desplegarDatosxx);
 var cxx = document.getElementById("limite");
@@ -298,7 +266,6 @@ var dxx = document.getElementById("divisiones");
 dxx.addEventListener("click", desplegarDatosxx);
 var lkxx = document.getElementById("divisiones");
 lkxx.addEventListener("keyup", desplegarDatosxx);
-/////////////////////////////////////////////////////////// parte numerica opcional 1 primera
 var divisible = false;
 var t = document.getElementById("tiempo");
 limite = parseInt(t.value);
@@ -406,7 +373,7 @@ function desplegarDatos ()	{
 		  }
 	  }
 	}
-// no esta correctamente implementado pues la idea es que al cambiar un valor se abra el acordeon en la pestaña relacionada al valor elegido, bien sea factor o modulo
+// Esta parte no esta correctamente implementada pues la idea es que al cambiar un valor se abra el acordeon en la pestaña relacionada al valor elegido
 var b = document.getElementById("mostrar");
 b.addEventListener("click", desplegarDatos);
 var c = document.getElementById("limite");
@@ -415,9 +382,12 @@ var d = document.getElementById("tiempo");
 d.addEventListener("click", desplegarDatos);
 var lk = document.getElementById("tiempo");
 lk.addEventListener("keyup", desplegarDatos);
-///////////////////////////////////////////////////
-///////////////////////////////////////////////////
-//para seleccionar colores, esta parte fue tomada de alguina pagina que no recuerdo pero se puede encontrar facil con un snippet en google. es algo largo debido a que al hacer click debe manejar el popup de seleccion con la paleta de colores y la asignacion a codigo hex.
+
+//================================
+// Manejo del color
+//================================
+// tomado de https://github.com/EastDesire/jscolor
+
 "use strict";
 if (!window.jscolor) { window.jscolor = (function () {
 	var jsc = {
